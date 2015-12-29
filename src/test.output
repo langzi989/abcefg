@@ -1,0 +1,251 @@
+aql file name
+doc file/dir path
+View: Unit
+
++-----------------------+
+| unit                  |
++-----------------------+
+| billion:(181,188)     |
+| percent:(195,202)     |
+| percent:(288,295)     |
+| percent:(314,321)     |
+| billion:(428,435)     |
+| percent:(443,450)     |
+| percent:(576,583)     |
+| million:(792,799)     |
+| percent:(890,897)     |
+| billion:(1166,1173)   |
+| billion:(1193,1200)   |
+| percent:(1249,1256)   |
+| percent:(1322,1329)   |
+| billion:(1410,1417)   |
+| billion:(1505,1512)   |
+| percent:(1525,1532)   |
+| percent:(1536,1543)   |
+| billion:(2078,2085)   |
+| percent:(2104,2111)   |
+| percent:(2127,2134)   |
+| billion:(2232,2239)   |
+| percent:(2247,2254)   |
+| percent:(2258,2265)   |
+| percent:(2326,2333)   |
+| percent:(2337,2344)   |
+| billion:(2378,2385)   |
+| billion:(2410,2417)   |
+| percent:(2426,2433)   |
+| billion:(2521,2528)   |
+| percent:(2548,2555)   |
+| percent:(2560,2567)   |
+| billion:(2770,2777)   |
+| percent:(2785,2792)   |
+| percent:(2867,2874)   |
+| million:(2883,2890)   |
+| percent:(3287,3294)   |
+| percent:(3412,3419)   |
+| percent:(3584,3591)   |
+| percent:(3746,3753)   |
+| percent:(3883,3890)   |
+| percent:(4025,4032)   |
+| percent:(4036,4043)   |
+| billion:(4077,4084)   |
+| percent:(4149,4156)   |
+| percent:(4160,4167)   |
+| billion:(4201,4208)   |
+| billion:(4255,4262)   |
+| percent:(4270,4277)   |
+| billion:(4506,4513)   |
+| billion:(4533,4540)   |
+| billion:(4647,4654)   |
+| percent:(4677,4684)   |
+| percent:(4773,4780)   |
+| percent:(4937,4944)   |
+| percent:(5006,5013)   |
+| percent:(5092,5099)   |
+| percent:(5153,5160)   |
+| percent:(5205,5212)   |
+| percent:(5258,5265)   |
+| percent:(5316,5323)   |
+| million:(5385,5392)   |
+| percent:(5446,5453)   |
+| percent:(5500,5507)   |
+| percent:(5575,5582)   |
+| billion:(5591,5598)   |
+| percent:(5661,5668)   |
+| billion:(5677,5684)   |
+| percent:(5711,5718)   |
+| million:(5824,5831)   |
+| million:(5851,5858)   |
+| million:(5925,5932)   |
+| million:(5985,5992)   |
+| million:(6251,6258)   |
+| percent:(6337,6344)   |
+| percent:(6364,6371)   |
+| billion:(6708,6715)   |
+| million:(6838,6845)   |
+| billion:(6907,6914)   |
+| million:(7001,7008)   |
+| million:(7107,7114)   |
+| billion:(7164,7171)   |
+| billion:(7296,7303)   |
+| billion:(7323,7330)   |
+| billion:(7418,7425)   |
+| percent:(7432,7439)   |
+| billion:(7520,7527)   |
+| percent:(7535,7542)   |
+| percent:(7564,7571)   |
+| percent:(7680,7687)   |
+| percent:(7710,7717)   |
+| billion:(7790,7797)   |
+| billion:(7807,7814)   |
+| percent:(8058,8065)   |
+| percent:(8161,8168)   |
+| billion:(8292,8299)   |
+| billion:(8320,8327)   |
+| percent:(8361,8368)   |
+| million:(8402,8409)   |
+| million:(8547,8554)   |
+| billion:(8632,8639)   |
+| billion:(8660,8667)   |
+| million:(8739,8746)   |
+| percent:(8903,8910)   |
+| billion:(8989,8996)   |
+| billion:(9074,9081)   |
+| billion:(9127,9134)   |
+| percent:(9232,9239)   |
+| percent:(9243,9250)   |
+| billion:(9384,9391)   |
+| percent:(9410,9417)   |
+| percent:(9433,9440)   |
+| billion:(9547,9554)   |
+| percent:(9579,9586)   |
+| percent:(9655,9662)   |
+| percent:(9669,9676)   |
+| billion:(9719,9726)   |
+| billion:(9751,9758)   |
+| percent:(9766,9773)   |
+| billion:(9845,9852)   |
+| percent:(9871,9878)   |
+| percent:(9882,9889)   |
+| billion:(9983,9990)   |
+| percent:(10009,10016) |
+| percent:(10020,10027) |
+| billion:(10135,10142) |
+| percent:(10155,10162) |
+| billion:(10222,10229) |
+| percent:(10248,10255) |
+| percent:(10259,10266) |
+| billion:(10332,10339) |
+| percent:(10357,10364) |
+| percent:(10368,10375) |
+| billion:(10456,10463) |
+| million:(10586,10593) |
+| billion:(10637,10644) |
+| million:(10732,10739) |
+| million:(10838,10845) |
+| billion:(10876,10883) |
+| billion:(11016,11023) |
+| billion:(11046,11053) |
+| billion:(11833,11840) |
+| billion:(11876,11883) |
+| billion:(11925,11932) |
+| billion:(12155,12162) |
+| billion:(12254,12261) |
+| billion:(12281,12288) |
+| billion:(12346,12353) |
+| billion:(12438,12445) |
+| billion:(12467,12474) |
+| percent:(12587,12594) |
+| billion:(12656,12663) |
+| billion:(12703,12710) |
++-----------------------+
+152 rows in set
+
+
+
+View: Revenue
+
++------------------------+
+| revenue                |
++------------------------+
+| revenues:(163,171)     |
+| revenues:(1456,1464)   |
+| revenues:(2058,2066)   |
+| revenues:(2305,2313)   |
+| revenues:(2391,2399)   |
+| revenues:(2846,2854)   |
+| revenues:(3265,3273)   |
+| revenues:(3597,3605)   |
+| revenues:(3972,3980)   |
+| revenues:(4098,4106)   |
+| revenues:(4722,4730)   |
+| revenues:(5105,5113)   |
+| revenues:(5217,5225)   |
+| revenues:(5295,5303)   |
+| revenue:(7401,7408)    |
+| revenues:(9110,9118)   |
+| revenues:(9211,9219)   |
+| revenues:(9364,9372)   |
+| revenues:(9634,9642)   |
+| revenues:(9732,9740)   |
+| revenues:(9814,9822)   |
+| revenues:(10202,10210) |
+| revenues:(10310,10318) |
+| revenues:(13426,13434) |
++------------------------+
+24 rows in set
+
+
+
+View: Division
+
++----------------------------------------+
+| division                               |
++----------------------------------------+
+| Software:(2494,2502)                   |
+| Global Technology Services:(3986,4012) |
+| Global Business Services:(4112,4136)   |
+| Global Business Services:(4424,4448)   |
+| Systems and Technology:(4590,4612)     |
+| S&TG:(4620,4624)                       |
+| S&TG:(4717,4721)                       |
+| Global Financing:(5270,5286)           |
+| Global Financing:(7826,7842)           |
+| Software:(9797,9805)                   |
+| Global Technology Services:(9934,9960) |
+| Global Business Services:(10091,10115) |
+| S&TG:(10189,10193)                     |
+| Global Financing:(10293,10309)         |
+| Global Financing:(10976,10992)         |
+| Global Financing:(12406,12422)         |
+| Global Financing:(12619,12635)         |
+| Global Financing:(14981,14997)         |
++----------------------------------------+
+18 rows in set
+
+
+
+View: RevenueAndDivision
+
++--------------------------+----------------------------------------+----------------------------------------------------------------------------------------------+
+| Amount                   | Division                               | RevenueAndDivision                                                                           |
++--------------------------+----------------------------------------+----------------------------------------------------------------------------------------------+
+| ent, adjusti:(4040,4052) | Global Technology Services:(3986,4012) | revenues from Global Technology Services increased 7 percent (4 percent, adjusting for currency) to $8.6 billion:(3972,4084) |
+| t, adjusting:(4166,4178) | Global Business Services:(4112,4136)   | revenues from Global Business Services increased 6 percent (3 percent, adjusting for currency) to $4.2 billion:(4098,4208) |
++--------------------------+----------------------------------------+----------------------------------------------------------------------------------------------+
+2 rows in set
+
+
+
+View: RevenueAndDivision2
+
++-----------------------------+------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Amount                      | Division                     | RevenueAndDivision                                                                                            |
++-----------------------------+------------------------------+---------------------------------------------------------------------------------------------------------------+
+| in the fourt:(5355,5367)    | Global Financing:(5270,5286) | Global Financing segment revenues increased 3 percent (flat, adjusting for currency) in the fourth quarter to $620 million:(5270,5392) |
+|  in 2006 tota:(9822,9835)   | Software:(9797,9805)         | Software segment revenues in 2006 totaled $18.2 billion:(9797,9852)                                                            |
+| evenues were :(10203,10216) | S&TG:(10189,10193)           | S&TG segment revenues were $22.0 billion:(10189,10229)                                                                     |
++-----------------------------+------------------------------+---------------------------------------------------------------------------------------------------------------+
+3 rows in set
+
+
+

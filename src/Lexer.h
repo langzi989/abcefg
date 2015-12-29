@@ -144,6 +144,7 @@ public:
                 v = 10*v + peek - 48;
                 readch();
             } while(!end_of_input() && isDigit(peek));
+            if (!(peek == ' ' || peek == '\t' || peek == '\r' || peek == '\n')) {index_backward();}
             return Num(v);
         }
         if (isLetter(peek)) {

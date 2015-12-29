@@ -6,6 +6,7 @@
 //#include "PatternItem.h"
 
 #include <map>
+#include <iostream>
 
 class Parser {
 private:
@@ -17,22 +18,27 @@ public:
     Parser(Lexer* l) {this->lex = l; move();}
     void move() {this->look = lex->scan();}
     void match(int t) {
-        if (look.tag == t) move();
-        else {} //error handle
+        if (look.tag == t) {
+            move();
+        }
+        else {
+            cout << "match error: " << look.tag << "," << t << endl;
+        } //error handle
     }
 
     void program() {
         while (look.tag != Tag.END) {
             currentView = View();
-
+            aql_stmt();
         }
     }
 
     void aql_stmt() {
-        // aql_stmt
         if (look.tag == Tag.CREATE) {
+            currentView = View();
             create_stmt();
             match(Tag.SEMICOLON);
+            View::put_view(&currentView);
         } else if(look.tag == Tag.OUTPUT) {
             output_stmt();
             match(Tag.SEMICOLON);
@@ -90,18 +96,30 @@ public:
         match(Tag.ID);
     }
 
+    void from_list() {
+        from_item();
+        if (look.tag == Tag.COMMA) {
+            match(Tag.COMMA);
+            from_list();
+        }
+    }
+
     void extract_stmt() {
         match(Tag.EXTRACT);
         extract_spec();
-        match(Tag.FROM);
-        from_item();
     }
 
     void extract_spec() {
         if (look.tag == Tag.REGEX) {
             regex_spec();
+            currentView.pattern_regex_action();
+            match(Tag.FROM);
+            from_item();
         } else if (look.tag == Tag.PATTERN) {
             pattern_spec();
+            match(Tag.FROM);
+            from_list();
+            currentView.pattern_action();
         } else {
             // error handle
         }
@@ -136,6 +154,7 @@ public:
         if (look.tag == Tag.AND) {
             match(Tag.AND);
             group_spec();
+        } else {
         }
     }
 
@@ -155,8 +174,12 @@ public:
 
     void pattern_expr() {
         pattern_pkg();
-        if (look.tag != Tag.FROM) {
+        if (look.tag == Tag.LEFTPARENTHESIS ||
+            look.tag == Tag.LESS ||
+            look.tag == Tag.REG
+            ) {
             pattern_expr();
+        } else {
         }
     }
 
@@ -188,7 +211,8 @@ public:
             } else if (look.tag == Tag.TOKEN) {
                 match(Tag.TOKEN); match(Tag.GREATER); match(Tag.LEFTBRACE);
                 int min = look.get_value();
-                match(Tag.NUM); match(Tag.COMMA);
+                match(Tag.NUM);
+                match(Tag.COMMA);
 
                 currentView.addPatternItem(pattern_type.TOKEN, min, look.get_value());
                 match(Tag.NUM); match(Tag.RIGHTBRACE);
@@ -206,8 +230,7 @@ public:
             match(Tag.AS);
             View::print_view(viewId, look.get_lexeme());
         } else {
-            nickName = viewId;
-
+            View::print_view(viewId, viewId);
         }
     }
 };

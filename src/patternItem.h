@@ -28,21 +28,21 @@ class patternItem {
 		string current_column;
 		string regex;
 	public:
-		patternItem(int type, string current_column, string view_nick_name) {
-			this.type = type;
-			this.current_column = current_column;
-			this.view_nick_name = view_nick_name;
+		patternItem(int type, string view_nick_name, string current_column) {
+			this->type = type;
+			this->current_column = current_column;
+			this->view_nick_name = view_nick_name;
 		}
 
 		patternItem(int type, int start, int end) {
-			this.type = type;
-			this.start = start;
-			this.end = end;
+			this->type = type;
+			this->start = start;
+			this->end = end;
 		}
 
 		patternItem(int type, string regex) {
-			this.type = type;
-			this.regex = regex;
+			this->type = type;
+			this->regex = regex;
 		}
 		/*
 			get the items from the class;

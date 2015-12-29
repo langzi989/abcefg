@@ -1,14 +1,19 @@
+#pragma once
 #include <map>
 #include <stdio.h>
 #include <fstream>
 #include <dirent.h>
+#include <vector>
+#include "tokenizer.h"
 
 using namespace std;
+class DocuSet;
 
 class DocuSet {
 public:
     static char* content;
     static int length;
+    static vector<token> tokens;
 
     // return true for file, false for dir
     bool input_file(string path) {
@@ -16,7 +21,7 @@ public:
     }
 
     // read a file in to a char array
-    static char* read_from(string file, int& length) {
+    char* read_from(string file, int& length) {
         filebuf *pbuf;
         ifstream filestr;
         long size;
@@ -39,16 +44,25 @@ public:
         return buffer;
     }
 
-    // load the content
-    static void load_doc(string path) {
-        if (DocuSet::content != NULL) {
+    // load the content, tokenize the content save as a vector
+    void load_doc(string path) {
+        if (content != NULL) {
             delete []content;
         }
-        DocuSet::content = DocuSet::read_from(path, DocuSet::length);
+        content = DocuSet::read_from(path, length);
+        tokens = tokenizer(path.c_str());
     }
 
     // return content (point)
-    static char* get_content(string filename) {
+    char* get_content(string filename) {
         return content;
     } 
+
+    // return tokens 
+    vector<token> get_tokens() {
+        return tokens;
+    }
 };
+char* DocuSet::content;
+int DocuSet::length;
+vector<token> DocuSet::tokens;

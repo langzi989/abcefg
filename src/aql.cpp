@@ -40,22 +40,26 @@ int main() {
     string doc_path;
 
     printf("aql file name\n");
-    cin >> aql_file;
-
+    //cin >> aql_file;
+    aql_file = "Revenue.aql";
     printf("doc file/dir path\n");
-    cin >> doc_path;
+    //cin >> doc_path;
+    doc_path = "Revenue.input";
 
     int length;
-    char* code = read_from_(doc_path, length);
+    char* code = read_from_(aql_file, length);
+
+    DocuSet doc;
 
 
     /*
         process single file or files in a dir
     */
     if (input_file(doc_path)) {                         // single file
-        DocuSet::load_doc(doc_path);
+        doc.load_doc(doc_path);
         Lexer lexer = Lexer(code, length);
         Parser parser = Parser(&lexer);
+        parser.program();
     } else {                                                       // a dir
         Lexer lexer = Lexer(code, length);
         struct dirent *ptr;    
@@ -68,9 +72,10 @@ int main() {
             if(ptr->d_name[0] == '.')
                 continue;
             if (input_file(ptr->d_name)) {          // single file
-                DocuSet::load_doc(ptr->d_name);
+                doc.load_doc(ptr->d_name);
                 lexer.back_end();
                 Parser parser = Parser(&lexer);
+                parser.program();
             }
         }
         closedir(dir);
